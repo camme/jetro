@@ -1,0 +1,32 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#grid {
+  display: flex;
+  flex: 1;
+  margin: 30px;
+}
+.jetro-item {
+  border-radius: 5px;
+}
+.color-1 {
+  background-color: #f00;
+}
+.color-2 {
+  background-color: #ff0;
+}
+.color-3 {
+  background-color: #0f0;
+}
+.color-4 {
+  background-color: #ffc0cb;
+}
