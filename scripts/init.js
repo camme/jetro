@@ -76,10 +76,12 @@ require(['lib/jetro'], function(jetro) {
         allItems[i].addEventListener("touchstart", remove, true);
     }
 
-    function remove() {
+    function remove(e) {
         var tags = this.getAttribute("data-tags");
         data = filterData(tags);
         jetro.render(data);
+        e.preventDefault();
+        return false;
     }
 
 });
