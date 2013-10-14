@@ -72,12 +72,14 @@ require(['lib/jetro'], function(jetro) {
 
     var allItems = document.querySelectorAll(".jetro-item");
     for(var i = 0, ii = allItems.length; i < ii; i++){
-        allItems[i].addEventListener("click", function() {
-            var tags = this.getAttribute("data-tags");
-            data = filterData(tags);
-            jetro.render(data);
-            console.log(tags);
-        }, true);
+        allItems[i].addEventListener("click", remove, true);
+        allItems[i].addEventListener("touchstart", remove, true);
+    }
+
+    function remove() {
+        var tags = this.getAttribute("data-tags");
+        data = filterData(tags);
+        jetro.render(data);
     }
 
 });
